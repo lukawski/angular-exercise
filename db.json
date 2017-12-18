@@ -1,0 +1,60 @@
+{
+  "writers": [
+    {
+      "id": 1,
+      "first_name": "Jo",
+      "last_name": "Nesbo",
+      "nationality": "norweska"
+    },
+    {
+      "id": 2,
+      "first_name": "Stephen",
+      "last_name": "King",
+      "nationality": "amerykańska"
+    },
+    {
+      "id": 3,
+      "first_name": "Howard",
+      "last_name": "Lovecraft",
+      "nationality": "amerykańska"
+    },
+    {
+      "id": 4,
+      "first_name": "Andrzej",
+      "last_name": "Sapkowski",
+      "nationality": "polska"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "author_id": 1,
+      "title": "Pierwszy śnieg",
+      "year": 2007
+    },
+    {
+      "id": 2,
+      "author_id": 2,
+      "title": "To",
+      "year": 1986
+    },
+    {
+      "id": 3,
+      "author_id": 2,
+      "title": "Pan Mercedes",
+      "year": 2014
+    },
+    {
+      "id": 4,
+      "author_id": 4,
+      "title": "Sezon Burz",
+      "year": 2013
+    },
+    {
+      "id": 5,
+      "author_id": 3,
+      "title": "Zew Cthulu",
+      "year": 1928
+    }
+  ]
+}
