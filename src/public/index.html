@@ -6,7 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webpack</title>
 </head>
-<body ng-app="app"
+<body ng-app="app" ng-cloak>
+  <div ng-controller="TablesController as ctrl">
+    {{ctrl.s}}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imię i nazwisko</th>
+          <th>Narodowość</th>
+          <th>Liczba książek</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="writer in ctrl.writers track by writer.id">
+          <td>{{writer.id}}</td>
+          <td>{{writer.first_name + ' ' + writer.last_name}}</td>
+          <td>{{writer.nationality}}</td>
+          <td>{{writer.booksCount}}</td>
+        </tr>
+      </tbody>
+    </table>
 
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tytuł</th>
+          <th>Autor</th>
+          <th>Rok wydania</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="book in ctrl.books track by book.id">
+          <td>{{book.id}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.authorName}}</td>
+          <td>{{book.year}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
