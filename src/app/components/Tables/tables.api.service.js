@@ -3,29 +3,35 @@ function TablesApiService($q, Books, Writers, TablesService) {
     const promises = [Books.query().$promise, Writers.query().$promise];
 
     return $q.all(promises)
-      .then(function (data) {
-        const [ books, writers ] = data;
+      .then((data) => {
+        const [books, writers] = data;
 
-        const transformedWriters = writers.map(writer => {
-          writer.booksCount = TablesService.countWriterBooks(books, writer.id);
-          return writer;
+        const transformedWriters = writers.map((writer) => {
+          const newWriter = {
+            ...writer,
+            booksCount: TablesService.countWriterBooks(books, writer.id),
+          };
+          return newWriter;
         });
 
-        const transformedBooks = books.map(book => {
-          book.authorName = TablesService.findBookAuthor(writers, book.author_id);
-          return book;
+        const transformedBooks = books.map((book) => {
+          const newBook = {
+            ...book,
+            authorName: TablesService.findBookAuthor(writers, book.author_id),
+          };
+          return newBook;
         });
 
         return {
           transformedBooks,
-          transformedWriters
-        }
-      })
+          transformedWriters,
+        };
+      });
   }
 
   return {
-    getWritersAndBooks: getWritersAndBooks
-  }
+    getWritersAndBooks,
+  };
 }
 
 export default TablesApiService;

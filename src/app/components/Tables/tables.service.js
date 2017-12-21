@@ -2,9 +2,9 @@ function TablesService() {
   function countWriterBooks(books, authorId) {
     let booksCount = 0;
 
-    for (let i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i += 1) {
       if (books[i].author_id === authorId) {
-        booksCount++;
+        booksCount += 1;
       }
     }
 
@@ -12,13 +12,11 @@ function TablesService() {
   }
 
   function findBookAuthor(writers, authorId) {
-    let author = `-`;
+    let author = '-';
 
-    for (let i = 0; i < writers.length; i++) {
-      console.log(writers[i].id, authorId);
+    for (let i = 0; i < writers.length; i += 1) {
       if (writers[i].id === authorId) {
         author = `${writers[i].first_name} ${writers[i].last_name}`;
-        console.log(author);
         break;
       }
     }
@@ -27,9 +25,9 @@ function TablesService() {
   }
 
   return {
-    countWriterBooks: countWriterBooks,
-    findBookAuthor: findBookAuthor
-  }
+    countWriterBooks,
+    findBookAuthor,
+  };
 }
 
 export default TablesService;
