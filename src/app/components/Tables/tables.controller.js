@@ -18,6 +18,10 @@ function TablesController(TablesApiService, $filter) {
   this.filterWriters = function filterWriters(searchText) {
     this.writers = $filter('filter')(writers, searchText);
   };
+
+  this.filterBooksByAuthor = function filterBooksByAuthor(authorId) {
+    this.books = $filter('filter')(books, { author_id: authorId });
+  };
 }
 
 export default TablesController;

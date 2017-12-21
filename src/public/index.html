@@ -27,7 +27,7 @@
                 <td>{{writer.id}}</td>
                 <td>{{writer.first_name + ' ' + writer.last_name}}</td>
                 <td>{{writer.nationality}}</td>
-                <td>{{writer.booksCount}}</td>
+                <td ng-click="ctrl.filterBooksByAuthor(writer.id)" class="pointer">{{writer.booksCount}}</td>
               </tr>
             </tbody>
           </table>

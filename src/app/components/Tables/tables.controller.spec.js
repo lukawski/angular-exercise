@@ -44,4 +44,10 @@ describe('Tables Controller', () => {
       expect(TablesController.filterWriters).toBeDefined();
     });
   });
+
+  describe('.filterBooksByAuthor()', () => {
+    it('shoud be defined', () => {
+      expect(TablesController.filterBooksByAuthor).toBeDefined();
+    });
+  });
 });
