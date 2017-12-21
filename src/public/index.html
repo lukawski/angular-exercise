@@ -11,7 +11,7 @@
     <div class="col writers">
       <div class="writers-search">
         <label for="writers-search" class="writers-search-label">Szukaj(pisarze)</label>
-        <input id="writers-search" type="text" class="writers-search-input">
+        <input id="writers-search" type="text" class="writers-search-input" ng-model="ctrl.writersSearchText" ng-change="ctrl.filterWriters(ctrl.writersSearchText)">
       </div>
         <table class="writers-table table">
             <thead>
@@ -35,7 +35,7 @@
     <div class="col books">
         <div class="books-search">
             <label for="books-search" class="books-search-label">Szukaj(książki)</label>
-            <input id="books-search" type="text" class="books-search-input">
+            <input id="books-search" type="text" class="books-search-input" ng-model="ctrl.booksSearchText" ng-change="ctrl.filterBooks(ctrl.booksSearchText)">
           </div>
         <table class="books-table table">
             <thead>
