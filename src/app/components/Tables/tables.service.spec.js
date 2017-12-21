@@ -1,5 +1,4 @@
 import services from '../../modules/services';
-// import _TablesService_ from './tables.service';
 
 describe('Tables Service', () => {
   let TablesService;
@@ -58,8 +57,12 @@ describe('Tables Service', () => {
       expect(TablesService.findBookAuthor).toBeDefined();
     });
 
-    it('should return author full name', () => {
+    it('should return author full name if author exists', () => {
       expect(TablesService.findBookAuthor(writers, 1)).toEqual('Jo Nesbo');
+    });
+
+    it('should return "-" if author doesn\'t exists', () => {
+      expect(TablesService.findBookAuthor(writers, 3)).toEqual('-');
     });
   });
 });

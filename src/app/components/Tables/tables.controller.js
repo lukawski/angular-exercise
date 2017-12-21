@@ -1,4 +1,4 @@
-function TablesController(Books, Writers, TablesApiService, $filter) {
+function TablesController(TablesApiService, $filter) {
   let books = [];
   let writers = [];
 
@@ -11,11 +11,11 @@ function TablesController(Books, Writers, TablesApiService, $filter) {
       writers = transformedWriters;
     });
 
-  this.filterBooks = function (searchText) {
+  this.filterBooks = function filterBooks(searchText) {
     this.books = $filter('filter')(books, searchText);
   };
 
-  this.filterWriters = function (searchText) {
+  this.filterWriters = function filterWriters(searchText) {
     this.writers = $filter('filter')(writers, searchText);
   };
 }
