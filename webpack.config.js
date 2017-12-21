@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
+  devtool: 'source-map',
   entry: __dirname + '/src/app/index.js',
   output: {
     path: __dirname + '/dist',
