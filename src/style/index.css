@@ -16,6 +16,10 @@ html {
   padding: 10px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .table {
   width: 100%;
   text-align: left;
