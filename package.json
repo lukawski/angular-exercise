@@ -27,13 +27,16 @@
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^2.0.9",
     "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.4",
     "webpack": "^3.10.0",
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.7"
   },
   "scripts": {
-    "start": "webpack-dashboard -- webpack-dev-server --history-api-fallback --inline --progress"
-  },
+    "start": "webpack-dashboard -- webpack-dev-server --history-api-fallback --inline --progress",
+    "test": "karma start",
+    "build": "APP_ENV=prod webpack"
+   },
   "dependencies": {
     "angular": "^1.6.7",
     "angular-resource": "^1.6.7"
