@@ -2,6 +2,8 @@ function TablesController(TablesApiService, $filter) {
   let books = [];
   let writers = [];
 
+  this.nationalities = ['amerykańska', 'norweska', 'polska'];
+
   TablesApiService.getWritersAndBooks()
     .then(({ transformedBooks, transformedWriters }) => {
       this.books = transformedBooks;
@@ -21,6 +23,14 @@ function TablesController(TablesApiService, $filter) {
 
   this.filterBooksByAuthor = function filterBooksByAuthor(authorId) {
     this.books = $filter('filter')(books, { author_id: authorId });
+  };
+
+  this.nationalityFilter = function nationalityFilter(nationality) {
+    this.writers = $filter('filter')(writers, { nationality });
+    this.books = $filter('filter')(books, (value) => {
+      const book = this.writers.find(writer => writer.id === value.author_id);
+      return !!book;
+    });
   };
 }
 
