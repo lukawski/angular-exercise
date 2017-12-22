@@ -1,3 +1,7 @@
+/*
+  API service for Tables both tables.
+  It handles calling both endpoints(/books & /writers) and transforming data.
+*/
 function TablesApiService($q, Books, Writers, TablesService) {
   function getWritersAndBooks() {
     const promises = [Books.query().$promise, Writers.query().$promise];

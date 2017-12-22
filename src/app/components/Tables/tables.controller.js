@@ -27,8 +27,8 @@ function TablesController(TablesApiService, $filter) {
   };
 
   this.nationalityFilter = function nationalityFilter(nationality) {
-    this.writers = $filter('filter')(writers, { nationality });
-    this.books = $filter('filter')(books, (value) => {
+    this.writers = $filter('filter')(writers, { nationality }); // 1. filter writers by choosen nationality
+    this.books = $filter('filter')(books, (value) => { // 2. filter books, find if the given book belongs to any of the filtered writers
       const book = this.writers.find(writer => writer.id === value.author_id);
       return !!book;
     });

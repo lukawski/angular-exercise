@@ -11,7 +11,7 @@ const config = {
   entry: __dirname + '/src/app/index.js',
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     publicPath: '/'
   },
   module: {
@@ -40,11 +40,12 @@ const config = {
       template: __dirname + '/src/public/index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('[name].[hash].css')
   ],
   devServer: {
     contentBase: './src/public',
-    port: 7700
+    port: 7700,
+    open: true
   }
 };
 
