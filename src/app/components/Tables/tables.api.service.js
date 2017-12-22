@@ -34,4 +34,6 @@ function TablesApiService($q, Books, Writers, TablesService) {
   };
 }
 
+TablesApiService.$inject = ['$q', 'Books', 'Writers', 'TablesService'];
+
 export default TablesApiService;

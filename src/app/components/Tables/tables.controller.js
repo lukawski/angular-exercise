@@ -1,3 +1,4 @@
+/* @ngInject */
 function TablesController(TablesApiService, $filter) {
   let books = [];
   let writers = [];
@@ -33,5 +34,7 @@ function TablesController(TablesApiService, $filter) {
     });
   };
 }
+
+TablesController.$inject = ['TablesApiService', '$filter'];
 
 export default TablesController;
