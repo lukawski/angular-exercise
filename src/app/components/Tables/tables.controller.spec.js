@@ -50,4 +50,10 @@ describe('Tables Controller', () => {
       expect(TablesController.filterBooksByAuthor).toBeDefined();
     });
   });
+
+  describe('.nationalityFilter()', () => {
+    it('should be defined', () => {
+      expect(TablesController.nationalityFilter).toBeDefined();
+    });
+  });
 });

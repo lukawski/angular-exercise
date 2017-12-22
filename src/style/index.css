@@ -52,3 +52,32 @@ html {
   border-bottom-color: blueviolet;
   box-shadow: 0 1px 0 0 blueviolet;
 }
+
+.dropdown {
+  position: relative;
+  padding: 10px;
+  background: #dbd7d7;
+}
+
+.dropdown-content {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  background: #dbd7d7;
+  width: 100%;
+  left: 0;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  padding: 0 5px;
+}
+
+.dropdown-content ul li {
+  margin: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
