@@ -75,7 +75,7 @@ html {
 }
 
 .dropdown-content ul li {
-  margin: 3px;
+  margin: 10px 0;
 }
 
 .dropdown:hover .dropdown-content {

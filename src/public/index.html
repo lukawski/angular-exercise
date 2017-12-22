@@ -12,8 +12,8 @@
         <div class="dropdown">
           <span>Narodowość</span>
           <div class="dropdown-content">
-            <ul ng-repeat="nationality in ctrl.nationalities">
-              <li class="pointer" ng-click="ctrl.nationalityFilter(nationality)">{{nationality}}</li>
+            <ul>
+              <li ng-repeat="nationality in ctrl.nationalities" class="pointer" ng-click="ctrl.nationalityFilter(nationality)">{{nationality}}</li>
             </ul>
         </div>
       </div>
