@@ -1,5 +1,5 @@
 function Books($resource) {
-  return $resource('http://localhost:3000/books/:id');
+  return $resource('https://exercise-json-server.herokuapp.com/books/:id');
 }
 
 Books.$inject = ['$resource'];
