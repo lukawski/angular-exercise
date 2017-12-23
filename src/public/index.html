@@ -64,6 +64,9 @@
     <div class="row">
       <button ng-click="ctrl.clearFilters()">Wyczysć filtry</button>
     </div>
+    <div class="row" ng-if="ctrl.getError">
+      <p>{{ctrl.getError}}</p>
+    </div>
   </div>
 </body>
 </html>
