@@ -1,7 +1,7 @@
-function Books($resource) {
-  return $resource('https://exercise-json-server.herokuapp.com/books/:id');
+function Books($resource, API_URL) {
+  return $resource(`${API_URL}books/:id`);
 }
 
-Books.$inject = ['$resource'];
+Books.$inject = ['$resource', 'API_URL'];
 
 export default Books;

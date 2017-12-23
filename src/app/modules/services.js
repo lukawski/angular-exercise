@@ -10,6 +10,7 @@ const servicesModule = angular.module('services', [ngResource])
   .factory('Books', Books)
   .factory('Writers', Writers)
   .factory('TablesService', TablesService)
-  .factory('TablesApiService', TablesApiService);
+  .factory('TablesApiService', TablesApiService)
+  .constant('API_URL', 'https://exercise-json-server.herokuapp.com/');
 
 export default servicesModule;

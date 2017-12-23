@@ -18,6 +18,9 @@ function TablesController(TablesApiService, $filter) {
 
       books = transformedBooks;
       writers = transformedWriters;
+    })
+    .catch(() => {
+      this.getError = 'Coś poszło nie tak. Spróbuj ponownie';
     });
 
   this.nationalities = ['amerykańska', 'norweska', 'polska'];
