@@ -1,7 +1,7 @@
-function Writers($resource) {
-  return $resource('https://exercise-json-server.herokuapp.com/writers/:id');
+function Writers($resource, API_URL) {
+  return $resource(`${API_URL}writers/:id`);
 }
 
-Writers.$inject = ['$resource'];
+Writers.$inject = ['$resource', 'API_URL'];
 
 export default Writers;
