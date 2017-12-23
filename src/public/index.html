@@ -9,14 +9,7 @@
 <body ng-app="tablesModule" ng-cloak>
   <div ng-controller="TablesController as ctrl">
     <div class="row">
-        <div class="dropdown">
-          <span>Narodowość</span>
-          <div class="dropdown-content">
-            <ul>
-              <li ng-repeat="nationality in ctrl.nationalities" class="pointer" ng-click="ctrl.nationalityFilter(nationality)">{{nationality}}</li>
-            </ul>
-        </div>
-      </div>
+      <select ng-options="nationality for nationality in ctrl.nationalities" ng-model="ctrl.selectedNationality" ng-change="ctrl.filterByNationality()"></select>
     </div>
     <div class="row">
       <div class="col writers">
@@ -67,6 +60,9 @@
               </tbody>
             </table>
       </div>
+    </div>
+    <div class="row">
+      <button ng-click="ctrl.clearFilters()">Wyczysć filtry</button>
     </div>
   </div>
 </body>
