@@ -33,6 +33,13 @@ describe('Tables Controller', () => {
     expect(TablesApiService.getWritersAndBooks).toHaveBeenCalled();
   });
 
+  it('should initialize with  4 models defined', () => {
+    expect(TablesController.nationalities).toBeDefined();
+    expect(TablesController.writersSearchText).toBeDefined();
+    expect(TablesController.booksSearchText).toBeDefined();
+    expect(TablesController.selectedNationality).toBeDefined();
+  });
+
   describe('.filterBooks()', () => {
     it('should be defined', () => {
       expect(TablesController.filterBooks).toBeDefined();
@@ -51,9 +58,9 @@ describe('Tables Controller', () => {
     });
   });
 
-  describe('.nationalityFilter()', () => {
+  describe('.filterByNationality()', () => {
     it('should be defined', () => {
-      expect(TablesController.nationalityFilter).toBeDefined();
+      expect(TablesController.filterByNationality).toBeDefined();
     });
   });
 });
