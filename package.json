@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --history-api-fallback --inline --progress",
-    "test": "karma start",
+    "test": "./node_modules/karma/bin/karma start",
     "build": "APP_ENV=prod webpack"
    },
   "dependencies": {
